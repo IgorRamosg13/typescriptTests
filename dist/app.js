@@ -28,8 +28,33 @@ var Concessionaria = /** @class */ (function () {
     };
     return Concessionaria;
 }());
-var concessionaria = new Concessionaria('Avenida Paulista');
-console.log(concessionaria);
+var Pessoa = /** @class */ (function () {
+    function Pessoa(nome, carroPreferido) {
+        this.nome = nome;
+        this.carroPreferido = carroPreferido;
+    }
+    Pessoa.prototype.dizerNomer = function () {
+        return this.nome;
+    };
+    Pessoa.prototype.dizerCarroPreferido = function () {
+        return this.carroPreferido;
+    };
+    Pessoa.prototype.comprarCarro = function (carro) {
+        this.carro = carro;
+    };
+    Pessoa.prototype.dizerCarroQueTem = function () {
+        return this.carro;
+    };
+    return Pessoa;
+}());
+/*
+let pessoa = new Pessoa('José','Veloster')
+console.log(pessoa.dizerCarroPreferido())
+*/
+/*
+let concessionaria = new Concessionaria('Avenida Paulista')
+console.log(concessionaria)
+*/
 /*
 //Instanciando um Carro passando o modelo como parâmetro
 let carroA = new Carro('Veloster', 3)
