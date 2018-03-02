@@ -21,6 +21,28 @@ class Carro{
     }
 } 
 
+class Concessionaria {
+
+    private endereco: string
+    private listaDeCarros: any // Any = Variável pode recever qualquer tipo de dado.
+
+    constructor (endereco: string){
+        this.endereco = endereco
+    }
+
+    public fornecerEndereco(): string{
+        return this.endereco
+    }
+
+    public mostrarListaDeCarros(): any{
+        return this.listaDeCarros
+    } 
+}
+
+let concessionaria = new Concessionaria('Avenida Paulista')
+console.log(concessionaria)
+
+/*
 //Instanciando um Carro passando o modelo como parâmetro
 let carroA = new Carro('Veloster', 3)
 
@@ -30,3 +52,4 @@ console.log(carroA)
 //Chamando Método
 carroA.acelerar()
 console.log(carroA)
+*/

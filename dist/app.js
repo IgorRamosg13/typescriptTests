@@ -16,10 +16,28 @@ var Carro = /** @class */ (function () {
     };
     return Carro;
 }());
+var Concessionaria = /** @class */ (function () {
+    function Concessionaria(endereco) {
+        this.endereco = endereco;
+    }
+    Concessionaria.prototype.fornecerEndereco = function () {
+        return this.endereco;
+    };
+    Concessionaria.prototype.mostrarListaDeCarros = function () {
+        return this.listaDeCarros;
+    };
+    return Concessionaria;
+}());
+var concessionaria = new Concessionaria('Avenida Paulista');
+console.log(concessionaria);
+/*
 //Instanciando um Carro passando o modelo como parâmetro
-var carroA = new Carro('Veloster', 3);
+let carroA = new Carro('Veloster', 3)
+
 //Apresentando objeto instanciado
-console.log(carroA);
+console.log(carroA)
+
 //Chamando Método
-carroA.acelerar();
-console.log(carroA);
+carroA.acelerar()
+console.log(carroA)
+*/ 
